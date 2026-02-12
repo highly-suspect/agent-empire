@@ -1,0 +1,10 @@
+pydantic-ai
+openai
+pgvector
+psycopg2-binary
+sqlalchemy
+beautifulsoup4
+requests
+streamlit
+python-dotenv
+lxml

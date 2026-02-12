@@ -1,0 +1,32 @@
+project:
+  name: ${PROJECT_NAME}
+  version: 1.0.0
+  environment: development
+
+agent:
+  model: openai:gpt-4o-mini
+  temperature: 0.2
+  max_tokens: 2000
+  timeout_seconds: 30
+  system_prompt: You are a helpful AI assistant.
+
+memory:
+  mode: file
+  namespace: default
+  file_path: knowledge/memory
+  vector_dimension: 1536
+
+logging:
+  level: INFO
+  format: json
+  output: logs/
+
+ui:
+  theme: light
+  page_title: AI Expert
+  page_icon: 🤖
+
+features:
+  streaming: false
+  citations: true
+  debug_mode: false

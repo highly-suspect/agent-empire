@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    platform: linux/amd64
+    container_name: ${PROJECT_NAME}_pgvector
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: ${PROJECT_NAME}
+    ports:
+      - "${PORT}:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
