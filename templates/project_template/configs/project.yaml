@@ -1,14 +1,14 @@
 project:
-  name: ${PROJECT_NAME}
+  name: pinescript-expert
   version: 1.0.0
   environment: development
 
 agent:
-  model: openai:gpt-4o-mini
+  model: ollama:llama3.2:latest
   temperature: 0.2
   max_tokens: 2000
   timeout_seconds: 30
-  system_prompt: You are a helpful AI assistant.
+  system_prompt: You are an expert in Pinescript code.
 
 memory:
   mode: file
