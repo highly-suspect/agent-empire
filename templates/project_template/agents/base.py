@@ -6,7 +6,7 @@ class BaseAgent:
         load_dotenv()
         self.name = name
         self.config = config or {}
-        model = self.config.get('model', 'openai:gpt-4o-mini')
+        model = self.config.get('model', 'ollama:llama3.2')
         temperature = self.config.get('temperature', 0.2)
         
         self.agent = Agent(
