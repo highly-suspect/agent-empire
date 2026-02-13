@@ -17,4 +17,4 @@ class BaseAgent:
     
     async def run(self, query):
         result = await self.agent.run(query)
-        return result.data
+        return result.output
